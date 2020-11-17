@@ -35,13 +35,19 @@
 
 ================================================================
 
+( 팀 작업에서 Branch를 각자 따고 하나로 모으기(Merge)도 함 )
 # Branch
  - 나뭇가지
  - 하나의 폴더를 다양한 상태로 나누는 것
-<<<<<<< HEAD
- - git reop > switch to > new branch : 새로운 branch생성
-=======
- - git reop > switch to > new branch : 새로운 branch생성
- - 다른 branch로 변경하는것을 check out이라고 한다
- - Git은 처음에는 main(master) branch에서 시작한다
->>>>>>> refs/heads/main
+ - git repo > switch to > new branch : 새로운 branch 생성
+
+# Merge
+ - 다른 Branch에서 작업한 내용을 합치는 것
+ - 원하는 Branch로 CheckOut한 후에 Merge를 선택하고 
+   합치려는 Branch를 선택한다.
+ex > master에 BranchA를 합치고 싶은경우
+	master로 checkout한 후에 BranchA를 Merge한다.
+
+# fast-forward
+ - 앞으로 감기
+ - 바람직한 Merge
