@@ -68,6 +68,7 @@ public class A00_Hello {
 		 System.out.println((char)44032);
 		 
 		 // ; 한 명령어가 끝났음을 알림.
+		 //////
 	}
 	
 }
