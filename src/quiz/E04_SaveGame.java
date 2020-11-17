@@ -186,7 +186,7 @@ public class E04_SaveGame {
 	// 컴퓨터와 진행하는 간단한 가위바위보 게임을 만든 후
 	// 플레이어의 전적을 파일에 저장해보세요 /
 
-	// 프로그램 실행시 전적을 불러오도록 만들어 보세요
+	// 프로그램 실행시 전적을 불러오도록 만들어 보세요 /
 
 	public static void main(String[] args) throws IOException {
 	
