@@ -38,4 +38,10 @@
 # Branch
  - 나뭇가지
  - 하나의 폴더를 다양한 상태로 나누는 것
+<<<<<<< HEAD
  - git reop > switch to > new branch : 새로운 branch생성
+=======
+ - git reop > switch to > new branch : 새로운 branch생성
+ - 다른 branch로 변경하는것을 check out이라고 한다
+ - Git은 처음에는 main(master) branch에서 시작한다
+>>>>>>> refs/heads/main
