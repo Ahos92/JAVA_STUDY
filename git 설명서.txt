@@ -29,4 +29,15 @@
 
 # 이전 commit으로 돌아가기
  - 원래는 명령어 써야함.
- - 
+ - 우클릭 > switch to > commit 선택후 원하는 시점
+ - 우클릭 > switch to : main 롤백
+ - Show View > Git Reflog에서 원하는 커밋을 check out
+
+================================================================
+
+# Branch
+ - 나뭇가지
+ - 하나의 폴더를 다양한 상태로 나누는 것
+ - git reop > switch to > new branch : 새로운 branch생성
+ - 다른 branch로 변경하는것을 check out이라고 한다
+ - Git은 처음에는 main(master) branch에서 시작한다
