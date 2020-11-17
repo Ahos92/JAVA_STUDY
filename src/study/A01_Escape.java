@@ -1,3 +1,4 @@
+package study;
 
 public class A01_Escape {
 

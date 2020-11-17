@@ -1,3 +1,4 @@
+package study;
 
 public class A02_variable {
 

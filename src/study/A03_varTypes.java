@@ -1,3 +1,4 @@
+package study;
 
 public class A03_varTypes {
 

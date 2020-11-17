@@ -1,3 +1,4 @@
+package study;
 /**
  *  문서화 주석
  *	(이클립스가 이 설명을 읽어준다)
@@ -68,7 +69,6 @@ public class A00_Hello {
 		 System.out.println((char)44032);
 		 
 		 // ; 한 명령어가 끝났음을 알림.
-		 //////
 	}
 	
 }
