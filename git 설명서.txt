@@ -49,5 +49,30 @@ ex > master에 BranchA를 합치고 싶은경우
 	master로 checkout한 후에 BranchA를 Merge한다.
 
 # fast-forward
- - 앞으로 감기
- - 바람직한 Merge
+	  ㅁ - ㅁ - ㅁ BranchA
+	  /
+ ㅁ - ㅁ - ㅁ main
+
+ - main's history
+ ㅁ - ㅁ - ㅁ
+
+ - BranchA's history
+	   ㅁ - ㅁ - ㅁ 
+	  /
+ ㅁ - ㅁ - ㅁ 
+
+ ※ mian에 최신 BranchA를 합치기 위해서는 앞으로 빨리감기만 하면 된다.
+
+================================================================
+
+# Rebase
+ Merge하려는 Branch에 시작점을 앞으로 땡겨서 history를 길게 만드는것
+
+	  ㅁ - ㅁ - ㅁ BranchA
+	  /
+ ㅁ - ㅁ - ㅁ - ㅁ - ㅁmain
+	
+		=>
+	  		  ㅁ - ㅁ - ㅁ BranchA
+	 		 /
+	 ㅁ - ㅁ - ㅁ - ㅁ - ㅁmain
