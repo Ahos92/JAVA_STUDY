@@ -73,6 +73,7 @@ ex > master에 BranchA를 합치고 싶은경우
  ㅁ - ㅁ - ㅁ - ㅁ - ㅁ  main
 	
 		=>
+<<<<<<< HEAD
 	  		      ㅁ - ㅁ - ㅁ BranchA
 	 		     /
 	 ㅁ - ㅁ - ㅁ - ㅁ - ㅁ	main
