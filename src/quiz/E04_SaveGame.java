@@ -2,6 +2,7 @@ package quiz;
 
 import java.io.*;
 
+// 세이브 게임
 public class E04_SaveGame {
 	
 	static class Game {
