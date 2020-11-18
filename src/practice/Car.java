@@ -8,7 +8,7 @@ public class Car implements Vehicle{
 
 	@Override
 	public void run() {
-		System.out.println("½Â¿ëÂ÷°¡ ´Þ¸³´Ï´Ù.");
+		System.out.println("½Â¿ëÂ÷°¡ ´Þ¸³´Ï´Ù. »æ»§»Í");
 	}
 	
 	
