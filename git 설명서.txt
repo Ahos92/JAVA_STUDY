@@ -76,3 +76,5 @@ ex > master에 BranchA를 합치고 싶은경우
 	  		  ㅁ - ㅁ - ㅁ BranchA
 	 		 /
 	 ㅁ - ㅁ - ㅁ - ㅁ - ㅁmain
+	 
+ 	※ Main은  BranchA의 과거가 됨
