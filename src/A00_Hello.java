@@ -8,12 +8,12 @@ public class A00_Hello {
 	
 	/* main 함수
 	 *  - 프로그램의 시작 지점
-	 *  - 프로그램 시작시 가장먼저 main()함수를 찾아서 실행
+	 *  - 프로그램 시작시 가장먼저 main()함수를 찾아서 실행  
 	 */
 	public static void main(String[] args) {
 		
 		// System.out.println() 함수
-		// ()안에 전달한 데이터를 콘솔에 출력
+		// ()안에 전달한 데이터를 콘솔에 출력 
 		System.out.println();
 		System.out.println("	Hello, world!");
 		System.out.println("	안녕");
@@ -54,7 +54,7 @@ public class A00_Hello {
 		 // 실수 + 정수 = 실수
 		 System.out.println(123.456f + 78);
 		 
-		 // 문자+ 정수 = 숫자
+		 // 문자+ 정수 = 숫자 
 		 System.out.println('한'+90);
 		 
 		 //
