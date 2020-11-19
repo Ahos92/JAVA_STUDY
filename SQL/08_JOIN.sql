@@ -144,7 +144,7 @@ ORDER BY
     
 -- 연습문제07 : 사원명/부서번호/부서이름을 출력 하되 사원이 한명도 속하지 않은 부서를 조회해보세요.
 SELECT
-    last_name, e.department_id, department_name
+    last_name, e.department_id, department_name,location_id
 FROM
     employees e, departments d
 WHERE
