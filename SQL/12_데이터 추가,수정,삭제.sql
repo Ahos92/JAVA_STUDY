@@ -50,3 +50,18 @@ UPDATE emp SET salary = salary * 0.6 where job_id LIKE '%MAN%';
 SELECT e1.last_name, e1.job_id, e1.salary, e2.salary
 FROM employees e1 INNER JOIN emp e2 USING(employee_id)
 WHERE e1.salary - e2.salary <> 0;
+
+/*
+    # DELETE
+    
+        - DELETE FROM 테이블명 WHERE 조건;
+        - 조건이 없으면 모든 행을 지운다
+        - 조건에 맞는 모든 행을 지운다
+*/
+COMMIT;
+
+SELECT * FROM coffees;
+DELETE FROM coffees WHERE cname LIKE '%아메리카노%';
+
+rollback;
+
