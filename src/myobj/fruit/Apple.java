@@ -3,7 +3,11 @@ package myobj.fruit;
 public class Apple {
 
 	int calorie;
-	String color;
+	public String color;
+	
+	public Apple() {
+		
+	}
 	
 	public Apple(String color) {
 		calorie = 300;
@@ -14,6 +18,12 @@ public class Apple {
 		
 	}
 	
+	public Apple(Integer calorie, String color) {
+		this.calorie = calorie;
+		this.color = color;
+	}
+
+
 
 	public Apple eat() { // throws로 try-catch넘겨버리면 메인에서 사용 할때 처리해야함
 
