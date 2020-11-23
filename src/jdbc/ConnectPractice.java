@@ -13,8 +13,9 @@ public class ConnectPractice {
 	// 해당 부서의 모든 사원들의 정보를 조회 해서 콘솔에 출력해보세요
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-
+		
+		int ch = 0;
+		
 		try {
 			// 드라이버
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -26,17 +27,45 @@ public class ConnectPractice {
 					"hr",
 					"hr"
 					);
+			
+			while (true) {
+				Scanner sc = new Scanner(System.in);
+				System.out.print("부서번호를 입력 하세요 >>");
+				ch = sc.nextInt();
+				sc.nextLine();
+				if ((ch > 0 && ch <= 110)
+						&& ch % 10 == 0) {		
+					break;
+				} else {
+					System.out.println("잘못된 부서 번호 입니다.");
+				}
+			
+			}
+			
 			// 쿼리문
 			PreparedStatement pstmt =
 					con.prepareStatement("select * from employees where department_id = ?");
 		
-				System.out.print("부서번호를 입력 하세요 >>");
-				pstmt.setInt(1, sc.nextInt());
+				pstmt.setInt(1, ch);
 			
 			// 실행
 			ResultSet rs = pstmt.executeQuery();
+			System.out.printf("%-8s%-15s%-15s%-15s%-20s%-15s%-15s%-10s%-18s%-15s%-15s\n", 
+								"#emp_id",
+								"#first_name",
+								"#last_name",
+								"#email",
+								"#phone_number",
+								"#hire_date",
+								"#job_id",
+								"#salary",
+								"#commission_pct",
+								"#manager_id",
+								"#department_id"
+								);
 			while (rs.next()) {
-				System.out.printf("%-4d%-15s%-15s%-15s%-20s%-15s%-15s%-10d%-10d%-10d%-10d\n",
+				
+				System.out.printf("%-8d%-15s%-15s%-15s%-20s%-15s%-15s%-10d%-18.2f%-15d%-15d\n",
 					
 								rs.getInt("employee_id"),
 								rs.getString("first_name"),
@@ -46,7 +75,7 @@ public class ConnectPractice {
 								rs.getDate("hire_date"),
 								rs.getString("job_id"),
 								rs.getInt("salary"),
-								rs.getInt("commission_pct"),
+								rs.getFloat("commission_pct"),
 								rs.getInt("manager_id"),
 								rs.getInt("department_id")
 				);
