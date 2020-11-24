@@ -88,7 +88,7 @@ public class D08_String {
 		
 		// substring : 문자열의 원하는 부분을 문자열로 바한
 		System.out.println(str.substring(10)); // 지정안해주며 ㄴ끝까지
-		System.out.println(str.substring(11, 17));
+		System.out.println(str.substring(0, 2));
 		System.out.println();
 		
 		// compareTo : Comparable 인터페이스 메서드

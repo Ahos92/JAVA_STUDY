@@ -50,7 +50,7 @@ public class ConnectPractice {
 			
 			// ½ÇÇà
 			ResultSet rs = pstmt.executeQuery();
-			System.out.printf("%-8s%-15s%-15s%-15s%-20s%-15s%-15s%-10s%-18s%-15s%-15s\n", 
+			System.out.printf("\n%-8s%-15s%-15s%-15s%-20s%-15s%-15s%-10s%-18s%-15s%-15s\n", 
 								"#emp_id",
 								"#first_name",
 								"#last_name",
@@ -63,6 +63,8 @@ public class ConnectPractice {
 								"#manager_id",
 								"#department_id"
 								);
+			System.out.println("------------------------------------------------------------------------------------"
+					+ "------------------------------------------------------------------------------------");
 			while (rs.next()) {
 				
 				System.out.printf("%-8d%-15s%-15s%-15s%-20s%-15s%-15s%-10d%-18.2f%-15d%-15d\n",

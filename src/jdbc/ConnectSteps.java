@@ -48,7 +48,7 @@ public class ConnectSteps {
 			pstmt.setString(5, "%a%");
 			
 			// 3-2. 준비된 구문을 실행한다. 
-			//			쿼리가 select문인 경우 결과를 Set으로 받아온다
+			//			쿼리가 select문인 경우 결과를 ResultSet으로 받아온다
 			ResultSet rs = pstmt.executeQuery();
 			
 			// 4. 반환된 결과를 사용한다
