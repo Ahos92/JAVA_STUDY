@@ -12,9 +12,9 @@ import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 public class HikariCpTest4 {
-
+	
 	public static void main(String[] args) {
-									// 파일경로
+									// 파일경로 적어야함
 		HikariConfig config =  new  HikariConfig("hikari.properties");
 		HikariDataSource ds =  new  HikariDataSource(config);
 		
