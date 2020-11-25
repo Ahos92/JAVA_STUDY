@@ -14,6 +14,7 @@ public class HikariCpTest2 {
 
 	public static void main(String[] args) {
 		
+		// datasource자체에 설정넣기
 		HikariDataSource ds = new HikariDataSource();
 		ds.setJdbcUrl("jdbc:oracle:thin:@localhost:1521/xepdb1");
 		ds.setUsername("hr");

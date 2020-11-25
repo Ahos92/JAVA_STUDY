@@ -11,25 +11,12 @@ import java.util.Properties;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
-public class HikariCpTest3 {
+public class HikariCpTest4 {
 
 	public static void main(String[] args) {
-		
-		// 설정파일 안에서만들기
-		// 저장된 값을 이용하는 방법
-		// Map, 딕셔너리, 속성, Property, Entry, JSON..
-		// data를 Key = Value형태로 다루는 것들
-		Properties props = new Properties();
-		props.setProperty("dataSourceClassName", "oracle.jdbc.pool.OracleDataSource");
-		props.setProperty("dataSource.url", "jdbc:oracle:thin:@localhost:1521/xepdb1");
-		props.setProperty("dataSource.user", "hr");
-		props.setProperty("dataSource.password", "hr");
-		props.setProperty("dataSource.databaseName", "xepdb1");
-		
-		props.put("dataSource.logWriter", new PrintWriter(System.out));
-		HikariConfig config = new HikariConfig(props);
-		
-		HikariDataSource ds = new HikariDataSource(config);
+									// 파일경로
+		HikariConfig config =  new  HikariConfig("hikari.properties");
+		HikariDataSource ds =  new  HikariDataSource(config);
 		
 		try {
 			Connection conn = ds.getConnection();

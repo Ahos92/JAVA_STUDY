@@ -12,6 +12,7 @@ public class HikariCpTest {
 
 	public static void main(String[] args) {
 		
+		// config객체만들어서 전달
 		HikariConfig config = new HikariConfig();
 		
 		config.setJdbcUrl("jdbc:oracle:thin:@localhost:1521/xepdb1");
