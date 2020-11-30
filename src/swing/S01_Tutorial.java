@@ -29,11 +29,15 @@ public class S01_Tutorial {
 		JFrame frame = new JFrame("제목!");
 		//JButton b = new JButton("CLICK");
 		
+		// JButton으로 받으면 이후 코드 수정 안해도됨
 		JButton b = new KaKaoButton(KaKaoBtnEnum.CAMERA, 500);
 
 		// b.setBounds(100, 100, 100, 50);
 		b.setLocation(200, 200);
 		
+		// JButton에는 setSize(int, int)밖에없어서
+		//  자식클래스에서 setSize(int)를 추가하더라도
+		// 	업캐스팅해서 사용하면 쓸 수 없게 된다.
 		
 		frame.add(b);		
 		// frame에 기본적으로 설정되어 있던 레이아웃을 제거한다.

@@ -51,6 +51,8 @@ public class S02_JButton extends JFrame{
 		button1.addActionListener(basic_btn_action);		
 		button2.addActionListener(basic_btn_action);
 		
+		// setPressedIcon, setRolloverIcon
+		
 		add(button1);
 		add(button2);
 		add(button3);

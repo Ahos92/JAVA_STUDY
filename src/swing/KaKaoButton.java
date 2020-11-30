@@ -25,7 +25,7 @@ public class KaKaoButton extends JButton{
 	static {
 		images = new HashMap<>();
 		try {
-			source = ImageIO.read(new File("C:\\Users\\Ahos\\Desktop\\사진\\수업 이미지\\kakao1.png"));
+			source = ImageIO.read(new File("C:\\Users\\Ahos\\Desktop\\국비지원과정\\수업 자료\\kakao1.png"));
 
 			SOURCE_IMAGE_WIDTH = source.getWidth() / SOURCE_IMAGE_COL;
 			SOURCE_IMAGE_HEIGHT = source.getHeight() / SOURCE_IMAGE_ROW;
