@@ -64,7 +64,7 @@ public class S04_Layout extends JFrame {
 			// # CardLayout
 			//	- 컴포넌트를 카드처럼 넘기면서 사용하는 레이아웃
 			//	- 생성자 인자 값 : 바깥쪽 여백 설정
-			CardLayout cards = new CardLayout(10, 10);
+			CardLayout cards = new CardLayout();
 			
 			// 레이아웃이 속해있는 부모 컨테이너를 전달해줘야한다.
 			Container c = this.getContentPane();

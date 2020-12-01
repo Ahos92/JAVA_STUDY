@@ -22,12 +22,13 @@ public class S03_JLabel extends JFrame {
 	// 	버튼을 하나 추가하고, 그 버튼을 누르면 사과 그림이 바나나로 변하도록 만들어 보세요
 	// 	(다시 누르면 사과가 됩니다.)
 	final static String[] PATHS = {
-				"C:\\Users\\Ahos\\Desktop\\사진\\짤\\아이씻팔.jpg",
-				"C:\\Users\\Ahos\\Desktop\\사진\\짤\\어서오고.jpg",
-				"C:\\Users\\Ahos\\Desktop\\사진\\짤\\초능력.jpg",
-				"C:\\Users\\Ahos\\Desktop\\사진\\짤\\둘리 물.jpg",
-				"C:\\Users\\Ahos\\Desktop\\사진\\짤\\선넘네.jpg",
-				"C:\\Users\\Ahos\\Desktop\\사진\\짤\\둘리웃음.png"
+			"Images\\Main.jpg",
+			"Images\\Coffe.jpg",
+			"Images\\Tea.jpg",
+			"Images\\Smoothie.jpg",
+			"Images\\Cake.jpg",
+			"Images\\Sandwich.jpg",
+			"Images\\Macaron.jpg"
 	};
 	
 	// ArrayList에 미리 ImageIon들을 만들어 놓는다.
