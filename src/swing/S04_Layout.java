@@ -104,7 +104,7 @@ public class S04_Layout extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new S04_Layout("card");
+		new S04_Layout("grid");
 
 	}
 }
