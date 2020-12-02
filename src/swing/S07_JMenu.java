@@ -10,7 +10,7 @@ import javax.swing.*;
 import swing.actions.ContainerAction;
 import swing.actions.ShowCardAction;
 
-public class S08_JMenu extends JFrame {
+public class S07_JMenu extends JFrame {
 
 	// My Code
 //	final static String[] PATHS = {
@@ -53,7 +53,7 @@ public class S08_JMenu extends JFrame {
 //		}
 //	}
 	
-	public S08_JMenu() {
+	public S07_JMenu() {
 		MySwingTools.initTestFrame(this);
 		
 		JMenuBar bar = new JMenuBar();
@@ -132,7 +132,7 @@ public class S08_JMenu extends JFrame {
 	
 	public static void main(String[] args) {
 	
-		new S08_JMenu();
+		new S07_JMenu();
 		
 	}
 	
