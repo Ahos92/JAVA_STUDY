@@ -20,6 +20,7 @@ public class S08_JPopupMenu {
 
 		popup.add(copy);
 		popup.add(cut);
+		popup.addSeparator(); // ±¸ºÐ¼±
 		popup.add(paste);
 
 		copy.addActionListener(new ActionListener() {

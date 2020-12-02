@@ -119,8 +119,9 @@ public class S07_JMenu extends JFrame {
 			center_panel.add(picname.kName, new PictureLabel(picname));
 			
 			JMenuItem item = new JMenuItem(picname.kName);
-			menu.add(item);
 			item.addActionListener(new ShowCardAction(center_panel, pic_label, picname.kName));
+			menu.add(item);
+			menu.addSeparator();
 		}
 		
 		bar.add(menu);
