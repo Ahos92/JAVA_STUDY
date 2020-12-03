@@ -18,7 +18,7 @@ public class DBConnect {
 					"hr"
 					);
 			
-			
+			System.out.println("DB에 연결되었습니다.");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
