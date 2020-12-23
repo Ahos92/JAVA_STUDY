@@ -1,0 +1,22 @@
+cmd 
+
+>>
+
+sqlplus
+
+sys as sysdba
+비밀번호 엔터
+
+alter system set processes = 5000 scope = spfile;
+
+alter system set large_pool_size=256M scope=both
+
+=================================
+
+C:\app\유저이름\product\18.0.0\dbhomeXE\database
+
+
+그림 1 > 파일 편집
+
+그림 2, 3> 수정
+

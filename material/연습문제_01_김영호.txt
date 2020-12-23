@@ -1,0 +1,62 @@
+public class S03_JLabel extends JFrame {
+
+	// 연습문제
+	// 	버튼을 하나 추가하고, 그 버튼을 누르면 사과 그림이 바나나로 변하도록 만들어 보세요
+	// 	(다시 누르면 사과가 됩니다.)
+	
+	static ImageIcon image01;
+	static ImageIcon image02;
+	
+	static {
+		
+		try {
+			
+			image01 = new ImageIcon(
+					ImageIO.read(
+							new File("C:\\Users\\Ahos\\Desktop\\사진\\수업\\apple.jpg")
+						).getScaledInstance(300, 300, Image.SCALE_SMOOTH)
+					);
+			
+			image02 = new ImageIcon(
+					ImageIO.read(
+							new File("C:\\Users\\Ahos\\Desktop\\사진\\수업\banana.jpg")
+						).getScaledInstance(300, 300, Image.SCALE_SMOOTH)
+					);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+public S03_JLabel() throws IOException {
+		
+		// JLabel : 텍스트, 그림 등을 적을 수 있는 컴포넌트
+		JLabel label01 = new JLabel("Hello, Java GUI!!");
+		JLabel label02 = 
+				new JLabel(new ImageIcon(
+						ImageIO.read(
+							new File("C:\\Users\\Ahos\\Desktop\\사진\\수업\\apple.jpg")
+						).getScaledInstance(300, 300, Image.SCALE_SMOOTH)
+					)
+				);
+		
+		JButton btn1 = new JButton("이미지 변경");
+		
+		ActionListener change_image = new ActionListener() {
+		
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				JButton clicked_btn = (JButton)e.getSource();
+			
+				if (clicked_btn.getText().equals("이미지 변경")) {
+					clicked_btn.setText("이미지 변경2");
+					label02.setIcon(image02);
+					
+				} else {
+					clicked_btn.setText("이미지 변경");
+					label02.setIcon(image01);
+				}
+
+			}
+		};

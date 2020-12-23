@@ -1,0 +1,113 @@
+package swing;
+
+import java.awt.*;
+import java.io.*;
+import java.util.ArrayList;
+
+import javax.imageio.*;
+import javax.swing.*;
+
+import swing.actions.MenuActionBtn;
+
+public class S08_JMenu extends JFrame {
+
+	final static String[] PATHS = {
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\Main.jpg",
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\Coffe.jpg",
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\Tea.jpg",
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\Smoothie.jpg",
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\Cake.jpg",
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\Sandwich.jpg",
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\Macaron.jpg"
+	};
+	
+	final static ArrayList<ImageIcon> images = new ArrayList<>();
+	
+	static {
+	
+		for (String path : PATHS) {
+			setImageIcon(path);
+		}	
+	}
+	
+	private static void setImageIcon(String path) {
+		try {
+			images.add(new ImageIcon(ImageIO
+										.read(new File(path))
+											.getScaledInstance(300, 300, Image.SCALE_SMOOTH)
+									)
+						);
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	final static ArrayList<String> imageNames = new ArrayList<>();
+	static {
+		
+		for (String name : PATHS) {
+			imageNames.add(name.substring(27, name.length()-4));
+		}
+	}
+	
+	public S08_JMenu() {
+		MySwingTools.initTestFrame(this);
+		
+		CardLayout cards = new CardLayout();
+		JPanel p1 = new JPanel(cards);
+		
+		Container c = this.getContentPane();
+		
+		setLayout(cards);
+		
+		for (int i = 0; i < PATHS.length; i++) {
+			add(imageNames.get(i), new JLabel(new ImageIcon(PATHS[i])));
+		}
+
+		JMenuBar bar = new JMenuBar();
+		JMenu menu = new JMenu("Menu");
+		JMenu sub_menu = new JMenu("Dessert");
+		JMenuItem i1, i2, i3;
+		JMenuItem s1, s2, s3;
+		
+		i1 = new JMenuItem("Coffe");
+		i2 = new JMenuItem("Tea");
+		i3 = new JMenuItem("Smoothie");
+	
+		s1 = new JMenuItem("Cake");
+		s2 = new JMenuItem("Sandwich");
+		s3 = new JMenuItem("Macaron");
+		
+		// CardLayout, 메뉴마다 사진 다르게하기
+	
+		i1.addActionListener(new MenuActionBtn(cards, c));
+		i2.addActionListener(new MenuActionBtn(cards, c));
+		i3.addActionListener(new MenuActionBtn(cards, c));
+		
+		s1.addActionListener(new MenuActionBtn(cards, c));
+		s2.addActionListener(new MenuActionBtn(cards, c));
+		s3.addActionListener(new MenuActionBtn(cards, c));
+	
+		menu.add(i1);
+		menu.add(i2);
+		menu.add(i3);
+
+		sub_menu.add(s1);
+		sub_menu.add(s2);
+		sub_menu.add(s3);
+		
+		bar.add(menu);
+		menu.add(sub_menu);
+
+		setJMenuBar(bar);	
+		setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+	
+		new S08_JMenu();
+		
+	}
+	
+}

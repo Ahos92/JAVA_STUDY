@@ -1,0 +1,28 @@
+package quiz.diceimage;
+
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
+import javax.swing.JFrame;
+import javax.swing.JPopupMenu;
+
+public class MouseRightClick extends MouseAdapter {
+
+	JPopupMenu popup;
+	JFrame f;
+	
+	public MouseRightClick(JPopupMenu popup, JFrame f) {
+		this.popup = popup;
+		this.f = f;
+	}
+	
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		if (e.getButton() == MouseEvent.BUTTON3) {
+			int x = e.getX();
+			int y = e.getY();
+			popup.show(f, x, y);
+		}
+	}	
+	
+}

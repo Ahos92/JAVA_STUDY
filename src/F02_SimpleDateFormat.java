@@ -27,7 +27,7 @@ public class F02_SimpleDateFormat {
 		 	a : 오전 / 오후
 		*/
 		
-		SimpleDateFormat simple = new SimpleDateFormat("yyyy년 MM월 dd일");
+		SimpleDateFormat simple = new SimpleDateFormat("yyyy-MM-dd");
 		
 		Date now = new Date();
 		

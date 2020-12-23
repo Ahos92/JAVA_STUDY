@@ -1,0 +1,64 @@
+public class S05_JPanel extends JFrame {
+
+	final static String[] PATHS = {
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\아이씻팔.jpg",
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\어서오고.jpg",
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\초능력.jpg",
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\둘리 물.jpg",
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\선넘네.jpg",
+			"C:\\Users\\Ahos\\Desktop\\사진\\짤\\둘리웃음.png"
+	};
+
+	final static ArrayList<String> imageNames = new ArrayList<>();
+	static {
+		
+		for (String name : PATHS) {
+			imageNames.add(name.substring(27, name.length()-4));
+		}
+	}
+	
+	public S05_JPanel() {		
+		MySwingTools.initTestFrame(this);
+
+		Container c = this.getContentPane();
+
+		// # JPanel
+		//	- 프레임 위에추가로 붙일 수 있는 컨테이너
+		//	- 새로운 컨테이너 역할을 하는 컴포넌트		
+		JPanel south_panel = new JPanel(new FlowLayout(FlowLayout.CENTER, 0, 0));
+		JPanel center_panel = new JPanel(new CardLayout(10, 10));
+		
+		// 1. center_panel에 이미지 몇장을 더 추가해 보세요
+		// 2. south_panel에 first, last, previous 버튼을 추가해보세요
+		JButton next_btn = new JButton("next");
+		next_btn.addActionListener(new NextAction(center_panel));
+		
+		JButton first_btn = new JButton("first"); 
+		first_btn.addActionListener(new FirstAction(center_panel));
+		
+		JButton last_btn = new JButton("last"); 
+		last_btn.addActionListener(new LastAction(center_panel));
+
+		JButton prev_btn = new JButton("prev"); 
+		prev_btn.addActionListener(new PrevAction(center_panel));
+
+		this.setLayout(new BorderLayout(0, 0));
+		this.add(center_panel, BorderLayout.CENTER);
+		this.add(south_panel, BorderLayout.SOUTH);
+
+		// center_panel은 cardlayout
+		for (int i = 0; i < PATHS.length; i++) {
+			center_panel.add(imageNames.get(i), new JLabel(new ImageIcon(PATHS[i])));
+		}
+		
+		// south_panel은 flowlayout
+		south_panel.add(first_btn);
+		south_panel.add(next_btn);
+		south_panel.add(prev_btn);
+		south_panel.add(last_btn);
+	}
+
+	public static void main(String[] args) {
+		new S05_JPanel();		
+	}
+}

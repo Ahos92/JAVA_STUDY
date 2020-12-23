@@ -1,0 +1,43 @@
+package quiz.diceimage;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+import quiz.S08_PopupMenuQuiz;
+
+public class RerollAction implements ActionListener{
+
+	ArrayList<ImageIcon> images;
+	JLabel label01; 
+	JLabel label02; 
+	JLabel label03;
+	JLabel label04; 
+	JLabel label05;
+
+	public RerollAction(JLabel label01, JLabel label02, JLabel label03,
+			JLabel label04, JLabel label05) {
+		images = S08_PopupMenuQuiz.getImageIcon();
+		this.label01 = label01;
+		this.label02 = label02;
+		this.label03 = label03;
+		this.label04 = label04;
+		this.label05 = label05;
+	}
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		System.out.println(e.getActionCommand() + " 눌림");
+		label01.setIcon(images.get((int)(Math.random()*6)));
+		label02.setIcon(images.get((int)(Math.random()*6)));
+		label03.setIcon(images.get((int)(Math.random()*6)));
+		label04.setIcon(images.get((int)(Math.random()*6)));
+		label05.setIcon(images.get((int)(Math.random()*6)));
+	}
+	
+}
