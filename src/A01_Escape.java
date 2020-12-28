@@ -23,7 +23,7 @@ public class A01_Escape {
 		System.out.println("C:\\Program Files\\Java\\jdk");
 		
 		// \" 큰따옴표를 출력하고 싶을 때 사용 ( \' 도 마찬가지)
-		System.out.println("저녁은 \"지옥\'에서 먹는다.");
+		System.out.println("저녁은 \"지옥\'에서 먹는다.ㅎ");
 		
 	}
 
