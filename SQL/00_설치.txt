@@ -25,12 +25,12 @@ day01.txt
 
 # grant create session to hr;
 # grant connect to hr;
-# grant resouce to hr;
+# grant resource to hr;
 	- hr계정에게 권한을 부여한다.
 
 # connect hr/1234@localhost:1521/XEPDB1;
 	- hr 계정으로 접속한다.
-
+a
 # exit
 	-DB를 종료한다.
 
